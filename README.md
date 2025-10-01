@@ -16,10 +16,10 @@ docker pull ghcr.io/jorgensd/dolfinx-tutorial:release
 Navigate to a folder where you have relevant local FEM files.
 ```
 cd ~/Documents
-mkdir fem_code # create a folder if it doesn't exist
-cd fem_code
+# Clone this github repository
+cd comp_pdes_osu
 ```
-From your `fem_code` folder, launch the Docker container.
+From your `comp_pdes_osu` folder, launch the Docker container.
 ```
 docker run -it --rm -p 8888:8888 -v $(pwd):/workspace -w /workspace ghcr.io/jorgensd/dolfinx-tutorial:release
 ```
@@ -27,4 +27,4 @@ This will start a Jupyter server. You can navigate to it by finding the relevant
 ```
 http://127.0.0.1:8888/lab?token=...
 ```
-The modifications you make in `/workspace` in the Docker image are saved locally on your machine in `fem_code` folder.
+The modifications you make in `/workspace` in the Docker image are saved locally on your machine in `comp_pdes_osu` folder.
